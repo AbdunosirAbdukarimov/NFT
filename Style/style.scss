@@ -1,0 +1,1666 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Courier Prime', monospace;
+    // font-family: 'Poppins', sans-serif;
+
+}
+
+
+.conteiner{
+    max-width: 1700px;
+    margin: 0 auto;
+    overflow-y: hidden;
+    header{
+        width: 100%;
+        height: 100vh;
+        .bars_modal{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            right: -100%;
+            z-index: 5;
+            backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            transition: all .2s linear;
+            margin-top: 11vh;
+            &.active{
+                right: 0;
+            }
+
+            ul{
+                display: block;
+                font-size: 22px;
+                color: white;
+                font-weight: 400;
+                li{
+                    margin-top: 20px;
+                    margin-bottom: 50px;
+                }
+
+            }
+            .login{
+                width: 100%;
+                height: 82px;
+                background-color: #FF90E8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 22px;
+                border-left: 1px solid #121212;
+                color: #121212;
+                span{
+                    cursor: pointer;
+                }
+            }
+        }
+        nav{
+            width: 100%;
+            // height: 11vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 95px;
+            border-bottom: 1px solid #000000;
+            position: fixed;
+            background-color: white;
+            z-index: 45;
+            
+
+            ul{
+                display: flex;
+                align-items: center;
+                margin-left: 40%;
+                gap: 32px;
+                font-size: 22px;
+                color: #121212;
+                font-weight: 400;
+                li{
+                    cursor: pointer;
+                }
+
+            }
+            .login{
+                width: 231px;
+                height: 82px;
+                background-color: #FF90E8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 22px;
+                border-left: 1px solid #121212;
+                color: #121212;
+                span{
+                    cursor: pointer;
+                }
+            }
+            .fa-bars-staggered{
+                display: none;
+            }
+        }
+        .header_main{
+            width: 100%;
+            height: 89vh;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 11vh;
+            .buy_NFT{
+                width: 40%;
+                height: 100%;
+                border-right: 1px solid #000000;
+                padding-left: 93px;
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                justify-content: center;
+                background-color: #FF90E8;
+
+                h1{
+                    width: 461px;
+                    font-size: 78px;
+                    color: #121212;
+                    font-family: 'Poppins', sans-serif;
+                }
+                p{
+                    width: 409px;
+                    color: #1F1F1F;
+                    font-size: 20px;
+                }
+                .buttons{
+                    margin-top: 3%;
+                    .Explore{
+                        padding: 12px 28px;
+                        font-size: 22px;
+                        color: white;
+                        background-color: black;
+                        border: 1px solid #121212;
+                        transition: all .2s linear;
+                        cursor: pointer;
+                        &:hover{
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                    .How_it_Works{
+                        padding: 12px 28px;
+                        font-size: 22px;
+                        color: white;
+                        background-color: black;
+                        border: 1px solid #121212;
+                        transition: all .2s linear;
+                        cursor: pointer;
+                        &:hover{
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+            .Robot_Arm{
+                width: 60%;
+                height: 100%;
+                background-color: #FFC900;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .img{
+                    width: 424px;
+                    height: 424px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .text{
+                    width: 424px;
+                    height: 120px;
+                    background-color: white;
+                    padding: 36px 41px;
+                    position: relative;
+                    border: 1px solid #121212;
+                    h2{
+                        font-size: 28px;
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 400;
+                    }
+                    p{
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                    .product_button{
+                        padding: 12px 14px;
+                        background-color: #FF90E8;
+                        border: 1px solid #121212;
+                        font-size: 16px;
+                        position: absolute;
+                        top: 40%;
+                        right: 41px;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        width: 100%;
+        padding: 80px 0;
+        .Popular_Artists{
+            h1{
+                font-size: 46px;
+                font-weight: 400;
+                font-family: 'Poppins', sans-serif;
+                color: #121212;
+                margin-left: 96px;
+            }
+            p{
+                font-size: 20px;
+                font-weight: 400;
+                color: #1F1F1F;
+                margin-left: 96px;
+            }
+            .boxes{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin: 0 96px;
+                .box{
+                    width: 310px;
+                    height: 205px;
+                    margin-top: 50px;
+                    border: 1px solid #121212;
+    
+                    .img{
+                        width: 100%;
+                        height: 126px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .text{
+                        width: 100%;
+                        height: 79px;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h3{
+                            font-size: 16px;
+                            color: #121212;
+                            margin-left: 60px;
+                        }
+                        span{
+                            font-size: 12px;
+                            color: #505050;
+                            margin-left: 60px;
+                        }
+                        .text_img{
+                            position: absolute;
+                            left: 18px;
+                        }
+                        .text_button{
+                            position: absolute;
+                            right: 18px;
+                            padding: 4px 12px;
+                            font-size: 16px;
+                            background-color: #6FEDD6;
+                        }
+                    }
+                }
+            }
+        }
+        .Discover{
+            margin: 0 96px 50px 96px;
+            h1{
+                font-size: 46px;
+                font-weight: 400;
+                font-family: 'Poppins', sans-serif;
+                color: #121212;
+                margin-left: 96px;
+                text-align: center;
+            }
+            p{
+                font-size: 20px;
+                font-weight: 400;
+                color: #1F1F1F;
+                margin-left: 96px;
+                text-align: center;
+
+            }
+            .menu{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 24px;
+                margin: 50px 184px;
+
+                button{
+                    padding: 12px 24px;
+                    background-color: transparent;
+                    color: #121212;
+                    font-size: 22px;
+                    border-radius: 32px;
+                    &.active{
+                        background-color: #FF90E8;
+                    }
+                }
+
+            }  
+            .Discover_boxes{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                .box{
+                    width: 400px;
+                    height: 563px;
+                    border: 1px solid #121212;
+                    margin-top: 22px;
+                    .img{
+                        width: 100%;
+                        height: 391px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .text{
+                        padding: 30px 24px;
+                        h3{
+                            font-size: 24px;
+                            span{
+                                font-weight: 400;
+                                color: #505050;
+                            }
+                        }
+                        hr{
+                            margin: 10px 0;
+                        }
+                        .text2{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            h2{
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: #505050;
+                            }
+                            span{
+                                padding: 3px 18px;
+                                font-size: 12px;
+                                color: #121212;
+                                border: 1px solid #121212;
+                                background-color: #FFDF68;
+                            }
+                        }
+
+                    }
+                }
+            } 
+        }
+        .actives{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 85px 168px;
+            border-bottom: 1px solid #121212;
+            border-top: 1px solid #121212;
+            .number{
+                text-align: center;
+                h1{
+                    font-size: 78px;
+                    font-weight: 500;
+                    color: #121212;
+                    font-family: 'Poppins', sans-serif;
+                }
+                p{
+                    font-size: 22px;
+                    font-weight: 400;
+                    color: #8b8b8b;
+                }
+            }
+        }
+        .New_NFT{
+            text-align: center;
+            background-color: #FFC900;
+            padding: 87px 0;
+            h1{
+                font-size: 46px;
+                font-weight: 400;
+                font-family: 'Poppins', sans-serif;
+                color: #121212;
+            }
+            p{
+                color: #1F1F1F;
+                font-size: 20px;
+                margin: 29px 0;
+            }
+            button{
+                padding: 12px 28px;
+                background-color: transparent;
+                font-size: 22px;
+            }
+        }
+        .start_shop{
+            width: 100%;
+            height: 900px;
+            display: flex;
+            justify-content: space-between;
+            .img{
+                width: 50%;
+                background-color: #23A094;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .img_box{
+                    width: 569px;
+                    height: 597px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .info{
+                width: 50%;
+                background-color: #FF90E8;
+                padding: 64px 70px;
+                span{
+                    width: 55px;
+                    height: 55px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: white;
+                    border-radius: 50%;
+                    font-size: 24px;
+                    margin-top: 50px ;
+                }
+                h1{
+                    font-size: 46px;
+                    color: #121212;
+                    margin: 19px 0;
+                }
+                p{
+                    font-size: 20px;
+                    color: #1F1F1F;
+                }
+            }
+        }
+        .All_NFT{
+            position: relative;
+            padding: 87px 96px;
+            h1{
+                font-size: 46px;
+                color: #121212;
+            }
+            h3{
+                font-size: 20px;
+                font-weight: 400;
+            }
+            .All_NFT_button{
+                position: absolute;
+                right: 96px;
+                top: 109px;
+                padding: 12px 28px;
+                font-size: 22px;
+                background-color: #6FEDD6;
+            }
+            .boxes{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 60px;
+                flex-wrap: wrap;
+                .box{
+                    width: 400px;
+                    height: 341px;
+                    border: 1px solid #121212;
+                    .img{
+                        width: 100%;
+                        height: 233px;
+                        img{
+                            width: 100%;
+                            height: 100%;   
+                        }
+                    }
+                    .text{
+                        border-top: 1px solid #121212;
+                        padding: 24px 30px;
+                        h2{
+                            font-size: 24px;
+                        }
+                        .span{
+                            font-size: 16px;
+                            color: #505050;
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:447px) {
+    .conteiner{
+        max-width: 100%;
+        margin: 0 auto;
+        overflow-x: hidden;
+        header{
+            width: 100%;
+            height: auto;
+            nav{
+                width: 100%;
+                height: 11vh;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 27px;
+                border-bottom: none;
+                ul{
+                    display: none;    
+                }
+                .login{
+                    display: none;
+                }
+                .fa-bars-staggered{
+                    display: flex;
+                    font-size: 24px;
+                    color: #FF90E8;
+                }
+            }
+            .header_main{
+                width: 100%;
+                height: auto;
+                display: block;
+                
+                .buy_NFT{
+                    width: 100%;
+                    height: 100%;
+                    padding: 50px;
+                    border-right: none;
+                    padding-left: 20%;
+    
+                    h1{
+                        width: 276px;
+                        font-size: 40px;
+                        color: #121212;
+                        font-family: 'Poppins', sans-serif;
+                    }
+                    p{
+                        width: 245px;
+                        color: #1F1F1F;
+                        font-size: 12px;
+                    }
+                    .buttons{
+                        margin-top: 3%;
+                        .Explore{
+                            padding: 12px 28px;
+                            font-size: 14px;
+                            color: white;
+                            background-color: black;
+                            border: 1px solid #121212;
+                            transition: all .2s linear;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: white;
+                            }
+                        }
+                        .How_it_Works{
+                            padding: 12px 28px;
+                            font-size: 14px;
+                            color: white;
+                            background-color: black;
+                            border: 1px solid #121212;
+                            transition: all .2s linear;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: white;
+                            }
+                        }
+                    }
+                }
+                .Robot_Arm{
+                    width: 100%;
+                    height: 100%;
+                    background-color: #FFC900;
+                    padding:  52px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 1px solid #121212;
+                    .img{
+                        width: 238px;
+                        height: 212px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .text{
+                        width: 238px;
+                        height: 60px;
+                        background-color: white;
+                        padding: 6px 7px;
+                        position: relative;
+                        border: 1px solid #121212;
+                        h2{
+                            font-size: 18px;
+                            font-family: 'Poppins', sans-serif;
+                            font-weight: 400;
+                        }
+                        p{
+                            font-size: 14px;
+                            font-weight: 700;
+                        }
+                        .product_button{
+                            padding: 12px 14px;
+                            background-color: #FF90E8;
+                            border: 1px solid #121212;
+                            font-size: 12px;
+                            position: absolute;
+                            top: 15%;
+                            right: 11px;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+        main{
+            width: 100%;
+            padding: 80px 0 0 0 ;
+            .Popular_Artists{
+                h1{
+                    font-size: 20px;
+                    font-weight: 400;
+                    font-family: 'Poppins', sans-serif;
+                    color: #121212;
+                    margin-left: 26px;
+                }
+                p{
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #1F1F1F;
+                    margin-left: 26px;
+                }
+                .boxes{
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    margin: 0 56px;
+                    .box{
+                        width: 310px;
+                        height: 205px;
+                        margin-top: 50px;
+                        border: 1px solid #121212;
+        
+                        .img{
+                            width: 100%;
+                            height: 126px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .text{
+                            width: 100%;
+                            height: 79px;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            h3{
+                                font-size: 16px;
+                                color: #121212;
+                                margin-left: 60px;
+                            }
+                            span{
+                                font-size: 12px;
+                                color: #505050;
+                                margin-left: 60px;
+                            }
+                            .text_img{
+                                position: absolute;
+                                left: 18px;
+                            }
+                            .text_button{
+                                position: absolute;
+                                right: 18px;
+                                padding: 4px 12px;
+                                font-size: 16px;
+                                background-color: #6FEDD6;
+                            }
+                        }
+                    }
+                }
+            }
+            .Discover{
+                margin: 0 26px 30px 26px;
+                h1{
+                    font-size: 20px;
+                    font-weight: 400;
+                    font-family: 'Poppins', sans-serif;
+                    color: #121212;
+                    margin-left: 26px;
+                    text-align: center;
+                }
+                p{
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #1F1F1F;
+                    margin-left: 26px;
+                    text-align: center;
+    
+                }
+                .menu{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 24px;
+                    margin: 20px 0px;
+    
+                    button{
+                        padding: 12px 24px;
+                        background-color: transparent;
+                        color: #121212;
+                        font-size: 22px;
+                        border-radius: 32px;
+                        &.active{
+                            background-color: #FF90E8;
+                        }
+                    }
+    
+                }  
+                .Discover_boxes{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    .box{
+                        width: 400px;
+                        height: 563px;
+                        border: 1px solid #121212;
+                        margin-top: 22px;
+                        .img{
+                            width: 100%;
+                            height: 391px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .text{
+                            padding: 30px 24px;
+                            h3{
+                                font-size: 24px;
+                                span{
+                                    font-weight: 400;
+                                    color: #505050;
+                                }
+                            }
+                            hr{
+                                margin: 10px 0;
+                            }
+                            .text2{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                h2{
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    color: #505050;
+                                }
+                                span{
+                                    padding: 3px 18px;
+                                    font-size: 12px;
+                                    color: #121212;
+                                    border: 1px solid #121212;
+                                    background-color: #FFDF68;
+                                }
+                            }
+    
+                        }
+                    }
+                } 
+            }
+            .actives{
+                display: flex;
+                justify-content: space-around;
+
+                flex-wrap: wrap;
+                padding: 25px 58px;
+                border-bottom: 1px solid #121212;
+                border-top: 1px solid #121212;
+                .number{
+                    text-align: center;
+                    h1{
+                        font-size: 35px;
+                        font-weight: 500;
+                        color: #121212;
+                        font-family: 'Poppins', sans-serif;
+                        margin-top: 30px;
+                    }
+                    p{
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: #8b8b8b;
+                    }
+                }
+            }
+            .New_NFT{
+                text-align: center;
+                background-color: #FFC900;
+                padding: 87px 0;
+                h1{
+                    font-size: 46px;
+                    font-weight: 400;
+                    font-family: 'Poppins', sans-serif;
+                    color: #121212;
+                }
+                p{
+                    color: #1F1F1F;
+                    font-size: 20px;
+                    margin: 29px 0;
+                }
+                button{
+                    padding: 12px 28px;
+                    background-color: transparent;
+                    font-size: 22px;
+                }
+            }
+            .start_shop{
+                width: 100%;
+                height: auto;
+                display: block;
+                .img{
+                    width: 100%;
+                    background-color: #23A094;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .img_box{
+                        width: 295px;
+                        height: 298px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .info{
+                    width: 100%;
+                    background-color: #FF90E8;
+                    padding: 64px 70px;
+                    span{
+                        width: 55px;
+                        height: 55px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: white;
+                        border-radius: 50%;
+                        font-size: 24px;
+                        margin-top: 50px ;
+                    }
+                    h1{
+                        font-size: 46px;
+                        color: #121212;
+                        margin: 19px 0;
+                    }
+                    p{
+                        font-size: 20px;
+                        color: #1F1F1F;
+                    }
+                }
+            }
+            .All_NFT{
+                display: none;
+            }
+    
+        }
+    }
+}
+
+@media screen and (min-width:447px) and (max-width:769px) {
+    .conteiner{
+        max-width: 100%;
+        margin: 0 auto;
+        overflow-x: hidden;
+        header{
+            width: 100%;
+            height: auto;
+            nav{
+                width: 100%;
+                height: 11vh;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 27px;
+                border-bottom: none;
+                ul{
+                    display: none;    
+                }
+                .login{
+                    display: none;
+                }
+                .fa-bars-staggered{
+                    display: flex;
+                    font-size: 24px;
+                    color: #FF90E8;
+                }
+            }
+            .header_main{
+                width: 100%;
+                height: auto;
+                display: block;
+                
+                .buy_NFT{
+                    width: 100%;
+                    height: 100%;
+                    padding: 50px;
+                    border-right: none;
+                    padding-left: 20%;
+    
+                    h1{
+                        width: 276px;
+                        font-size: 40px;
+                        color: #121212;
+                        font-family: 'Poppins', sans-serif;
+                    }
+                    p{
+                        width: 245px;
+                        color: #1F1F1F;
+                        font-size: 12px;
+                    }
+                    .buttons{
+                        margin-top: 3%;
+                        .Explore{
+                            padding: 12px 28px;
+                            font-size: 14px;
+                            color: white;
+                            background-color: black;
+                            border: 1px solid #121212;
+                            transition: all .2s linear;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: white;
+                            }
+                        }
+                        .How_it_Works{
+                            padding: 12px 28px;
+                            font-size: 14px;
+                            color: white;
+                            background-color: black;
+                            border: 1px solid #121212;
+                            transition: all .2s linear;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: white;
+                            }
+                        }
+                    }
+                }
+                .Robot_Arm{
+                    width: 100%;
+                    height: 100%;
+                    background-color: #FFC900;
+                    padding:  52px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 1px solid #121212;
+                    .img{
+                        width: 238px;
+                        height: 212px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .text{
+                        width: 238px;
+                        height: 60px;
+                        background-color: white;
+                        padding: 6px 7px;
+                        position: relative;
+                        border: 1px solid #121212;
+                        h2{
+                            font-size: 18px;
+                            font-family: 'Poppins', sans-serif;
+                            font-weight: 400;
+                        }
+                        p{
+                            font-size: 14px;
+                            font-weight: 700;
+                        }
+                        .product_button{
+                            padding: 12px 14px;
+                            background-color: #FF90E8;
+                            border: 1px solid #121212;
+                            font-size: 12px;
+                            position: absolute;
+                            top: 15%;
+                            right: 11px;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+        main{
+            width: 100%;
+            padding: 80px 0 0 0 ;
+            .Popular_Artists{
+                h1{
+                    font-size: 20px;
+                    font-weight: 400;
+                    font-family: 'Poppins', sans-serif;
+                    color: #121212;
+                    margin-left: 26px;
+                }
+                p{
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #1F1F1F;
+                    margin-left: 26px;
+                }
+                .boxes{
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    margin: 0 56px;
+                    .box{
+                        width: 310px;
+                        height: 205px;
+                        margin-top: 50px;
+                        border: 1px solid #121212;
+        
+                        .img{
+                            width: 100%;
+                            height: 126px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .text{
+                            width: 100%;
+                            height: 79px;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            h3{
+                                font-size: 16px;
+                                color: #121212;
+                                margin-left: 60px;
+                            }
+                            span{
+                                font-size: 12px;
+                                color: #505050;
+                                margin-left: 60px;
+                            }
+                            .text_img{
+                                position: absolute;
+                                left: 18px;
+                            }
+                            .text_button{
+                                position: absolute;
+                                right: 18px;
+                                padding: 4px 12px;
+                                font-size: 16px;
+                                background-color: #6FEDD6;
+                            }
+                        }
+                    }
+                }
+            }
+            .Discover{
+                margin: 0 26px 30px 26px;
+                h1{
+                    font-size: 20px;
+                    font-weight: 400;
+                    font-family: 'Poppins', sans-serif;
+                    color: #121212;
+                    margin-left: 26px;
+                    text-align: center;
+                }
+                p{
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #1F1F1F;
+                    margin-left: 26px;
+                    text-align: center;
+    
+                }
+                .menu{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 24px;
+                    margin: 20px 0px;
+    
+                    button{
+                        padding: 12px 24px;
+                        background-color: transparent;
+                        color: #121212;
+                        font-size: 22px;
+                        border-radius: 32px;
+                        &.active{
+                            background-color: #FF90E8;
+                        }
+                    }
+    
+                }  
+                .Discover_boxes{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    .box{
+                        width: 400px;
+                        height: 563px;
+                        border: 1px solid #121212;
+                        margin-top: 22px;
+                        .img{
+                            width: 100%;
+                            height: 391px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .text{
+                            padding: 30px 24px;
+                            h3{
+                                font-size: 24px;
+                                span{
+                                    font-weight: 400;
+                                    color: #505050;
+                                }
+                            }
+                            hr{
+                                margin: 10px 0;
+                            }
+                            .text2{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                h2{
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    color: #505050;
+                                }
+                                span{
+                                    padding: 3px 18px;
+                                    font-size: 12px;
+                                    color: #121212;
+                                    border: 1px solid #121212;
+                                    background-color: #FFDF68;
+                                }
+                            }
+    
+                        }
+                    }
+                } 
+            }
+            .actives{
+                display: flex;
+                justify-content: space-around;
+
+                flex-wrap: wrap;
+                padding: 25px 58px;
+                border-bottom: 1px solid #121212;
+                border-top: 1px solid #121212;
+                .number{
+                    text-align: center;
+                    h1{
+                        font-size: 35px;
+                        font-weight: 500;
+                        color: #121212;
+                        font-family: 'Poppins', sans-serif;
+                        margin-top: 30px;
+                    }
+                    p{
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: #8b8b8b;
+                    }
+                }
+            }
+            .New_NFT{
+                text-align: center;
+                background-color: #FFC900;
+                padding: 87px 0;
+                h1{
+                    font-size: 46px;
+                    font-weight: 400;
+                    font-family: 'Poppins', sans-serif;
+                    color: #121212;
+                }
+                p{
+                    color: #1F1F1F;
+                    font-size: 20px;
+                    margin: 29px 0;
+                }
+                button{
+                    padding: 12px 28px;
+                    background-color: transparent;
+                    font-size: 22px;
+                }
+            }
+            .start_shop{
+                width: 100%;
+                height: auto;
+                display: block;
+                .img{
+                    width: 100%;
+                    background-color: #23A094;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .img_box{
+                        width: 295px;
+                        height: 298px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .info{
+                    width: 100%;
+                    background-color: #FF90E8;
+                    padding: 64px 70px;
+                    span{
+                        width: 55px;
+                        height: 55px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: white;
+                        border-radius: 50%;
+                        font-size: 24px;
+                        margin-top: 50px ;
+                    }
+                    h1{
+                        font-size: 46px;
+                        color: #121212;
+                        margin: 19px 0;
+                    }
+                    p{
+                        font-size: 20px;
+                        color: #1F1F1F;
+                    }
+                }
+            }
+            .All_NFT{
+                display: none;
+            }
+    
+        }
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1200px) {
+    .conteiner{
+        max-width: 100%;
+        margin: 0 auto;
+        overflow-x: hidden;
+        header{
+            width: 100%;
+            height: auto;
+            nav{
+                width: 100%;
+                height: 11vh;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 27px;
+                border-bottom: none;
+                ul{
+                    display: none;    
+                }
+                .login{
+                    display: none;
+                }
+                .fa-bars-staggered{
+                    display: flex;
+                    font-size: 24px;
+                    color: #FF90E8;
+                }
+            }
+            .header_main{
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                .buy_NFT{
+                    width: 100%;
+                    height: 100%;
+                    padding: 50px;
+                    border-right: none;
+                    padding-left: 35%;
+    
+                    h1{
+                        width: 276px;
+                        font-size: 40px;
+                        color: #121212;
+                        font-family: 'Poppins', sans-serif;
+                    }
+                    p{
+                        width: 245px;
+                        color: #1F1F1F;
+                        font-size: 12px;
+                    }
+                    .buttons{
+                        margin-top: 3%;
+                        .Explore{
+                            padding: 12px 28px;
+                            font-size: 14px;
+                            color: white;
+                            background-color: black;
+                            border: 1px solid #121212;
+                            transition: all .2s linear;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: white;
+                            }
+                        }
+                        .How_it_Works{
+                            padding: 12px 28px;
+                            font-size: 14px;
+                            color: white;
+                            background-color: black;
+                            border: 1px solid #121212;
+                            transition: all .2s linear;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: white;
+                            }
+                        }
+                    }
+                }
+                .Robot_Arm{
+                    width: 100%;
+                    height: 100%;
+                    background-color: #FFC900;
+                    padding:  52px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 1px solid #121212;
+                    .img{
+                        width: 238px;
+                        height: 212px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .text{
+                        width: 238px;
+                        height: 60px;
+                        background-color: white;
+                        padding: 6px 7px;
+                        position: relative;
+                        border: 1px solid #121212;
+                        h2{
+                            font-size: 18px;
+                            font-family: 'Poppins', sans-serif;
+                            font-weight: 400;
+                        }
+                        p{
+                            font-size: 14px;
+                            font-weight: 700;
+                        }
+                        .product_button{
+                            padding: 12px 14px;
+                            background-color: #FF90E8;
+                            border: 1px solid #121212;
+                            font-size: 12px;
+                            position: absolute;
+                            top: 15%;
+                            right: 11px;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+        main{
+            width: 100%;
+            padding: 80px 0 0 0 ;
+            .Popular_Artists{
+                h1{
+                    font-size: 20px;
+                    font-weight: 400;
+                    font-family: 'Poppins', sans-serif;
+                    color: #121212;
+                    margin-left: 56px;
+                }
+                p{
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #1F1F1F;
+                    margin-left: 56px;
+                }
+                .boxes{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    margin: 0 56px;
+                    .box{
+                        width: 310px;
+                        height: 205px;
+                        margin-top: 50px;
+                        border: 1px solid #121212;
+        
+                        .img{
+                            width: 100%;
+                            height: 126px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .text{
+                            width: 100%;
+                            height: 79px;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            h3{
+                                font-size: 16px;
+                                color: #121212;
+                                margin-left: 60px;
+                            }
+                            span{
+                                font-size: 12px;
+                                color: #505050;
+                                margin-left: 60px;
+                            }
+                            .text_img{
+                                position: absolute;
+                                left: 18px;
+                            }
+                            .text_button{
+                                position: absolute;
+                                right: 18px;
+                                padding: 4px 12px;
+                                font-size: 16px;
+                                background-color: #6FEDD6;
+                            }
+                        }
+                    }
+                }
+            }
+            .Discover{
+                margin: 0 26px 30px 26px;
+                h1{
+                    font-size: 20px;
+                    font-weight: 400;
+                    font-family: 'Poppins', sans-serif;
+                    color: #121212;
+                    margin-left: 26px;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+                p{
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #1F1F1F;
+                    margin-left: 26px;
+                    text-align: center;
+    
+                }
+                .menu{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 24px;
+                    margin: 20px 0px;
+    
+                    button{
+                        padding: 12px 24px;
+                        background-color: transparent;
+                        color: #121212;
+                        font-size: 22px;
+                        border-radius: 32px;
+                        &.active{
+                            background-color: #FF90E8;
+                        }
+                    }
+    
+                }  
+                .Discover_boxes{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    .box{
+                        width: 400px;
+                        height: 563px;
+                        border: 1px solid #121212;
+                        margin-top: 22px;
+                        .img{
+                            width: 100%;
+                            height: 391px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .text{
+                            padding: 30px 24px;
+                            h3{
+                                font-size: 24px;
+                                span{
+                                    font-weight: 400;
+                                    color: #505050;
+                                }
+                            }
+                            hr{
+                                margin: 10px 0;
+                            }
+                            .text2{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                h2{
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    color: #505050;
+                                }
+                                span{
+                                    padding: 3px 18px;
+                                    font-size: 12px;
+                                    color: #121212;
+                                    border: 1px solid #121212;
+                                    background-color: #FFDF68;
+                                }
+                            }
+    
+                        }
+                    }
+                } 
+            }
+            .actives{
+                display: flex;
+                justify-content: space-around;
+
+                flex-wrap: wrap;
+                padding: 25px 58px;
+                border-bottom: 1px solid #121212;
+                border-top: 1px solid #121212;
+                .number{
+                    text-align: center;
+                    h1{
+                        font-size: 35px;
+                        font-weight: 500;
+                        color: #121212;
+                        font-family: 'Poppins', sans-serif;
+                        margin-top: 30px;
+                    }
+                    p{
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: #8b8b8b;
+                    }
+                }
+            }
+            .New_NFT{
+                text-align: center;
+                background-color: #FFC900;
+                padding: 87px 0;
+                h1{
+                    font-size: 46px;
+                    font-weight: 400;
+                    font-family: 'Poppins', sans-serif;
+                    color: #121212;
+                }
+                p{
+                    color: #1F1F1F;
+                    font-size: 20px;
+                    margin: 29px 0;
+                }
+                button{
+                    padding: 12px 28px;
+                    background-color: transparent;
+                    font-size: 22px;
+                }
+            }
+            .start_shop{
+                width: 100%;
+                height: auto;
+                display: block;
+                .img{
+                    width: 100%;
+                    background-color: #23A094;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .img_box{
+                        width: 295px;
+                        height: 298px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .info{
+                    width: 100%;
+                    background-color: #FF90E8;
+                    padding: 64px 70px;
+                    span{
+                        width: 55px;
+                        height: 55px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: white;
+                        border-radius: 50%;
+                        font-size: 24px;
+                        margin-top: 50px ;
+                    }
+                    h1{
+                        font-size: 46px;
+                        color: #121212;
+                        margin: 19px 0;
+                    }
+                    p{
+                        font-size: 20px;
+                        color: #1F1F1F;
+                    }
+                }
+            }
+            .All_NFT{
+                display: none;
+            }
+    
+        }
+    }   
+}
